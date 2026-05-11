@@ -21,7 +21,7 @@ test('TC02: Verify input placeholder disappears on typing', async ({ page }) => 
   await expect(page).toHaveTitle(/Practice Elements/);
 
   await page.getByTestId('practice-card-input-fields').getByText('Practice Now').click();
-  await expect(page).toHaveTitle(/Input Field Automation Practice/);
+  await expect(page).toHaveTitle(/Input Field Automation Practice/); 
 
   const inputLocator = page.locator(`//input[@name='movieName']`);
   await expect(inputLocator).toHaveAttribute('placeholder', 'Enter hollywood movie name');
