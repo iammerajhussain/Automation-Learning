@@ -9,9 +9,9 @@ test('TC01: Verify all table column headers are present', async ({ page }) => {
 
   await page.waitForSelector('table');
 
-    const headers = await page.locator('[aria-label="Data table practice exercises"]').locator('table thead th').allTextContents();
+  const headers = await page.locator('[aria-label="Data table practice exercises"]').locator('table thead th').allTextContents();
 
-    console.log(headers);
+  console.log(headers);
 
   expect(headers).toEqual([
     'Sr No.',
@@ -31,10 +31,8 @@ test('TC02: Count the total number of rows in the data table', async ({ page }) 
   await page.getByTestId('practice-card-data-table').getByText('Practice Now').click();
   await expect(page).toHaveTitle(/How to Automate Tables/);
 
-    await page.waitForSelector('table tbody tr');
-    const rowCount = await page.locator('table tbody tr').count();
-    expect(rowCount).toBe(5);
+  await page.waitForSelector('table tbody tr');
+  const rowCount = await page.locator('table tbody tr').count();
+  expect(rowCount).toBe(5);
 
 });
-
-
