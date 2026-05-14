@@ -12,13 +12,13 @@ test('TC01: Fill all fields with valid data and submit successfully', async ({ p
   await page.getByTestId('input-first-name').fill('Demo');
   await page.waitForTimeout(3000);
   await page.getByTestId('input-last-name').fill('User');
-    await page.waitForTimeout(3000);
+  await page.waitForTimeout(3000);
 
   await page.getByTestId('input-email').fill('demouser@test.com');
-    await page.waitForTimeout(3000);
+  await page.waitForTimeout(3000);
 
   await page.getByTestId('input-phone').fill('1012343332');
-    await page.waitForTimeout(3000);
+  await page.waitForTimeout(3000);
 
   await page.getByTestId('input-dob').fill('1995-08-08');
   await page.waitForTimeout(3000);
@@ -27,13 +27,13 @@ test('TC01: Fill all fields with valid data and submit successfully', async ({ p
   await page.waitForTimeout(3000);
 
   await page.getByTestId('select-country').click();
-    await page.waitForTimeout(3000);
+  await page.waitForTimeout(3000);
 
   await page.getByRole('option', { name: 'USA' }).click();
   await page.waitForTimeout(3000);
 
   await page.getByTestId('input-city').fill('Texas');
-  
+
   await page.getByTestId('input-password').fill('pass123');
   await page.getByTestId('input-confirm-password').fill('pass123');
 
