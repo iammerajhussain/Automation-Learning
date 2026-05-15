@@ -30,12 +30,12 @@ test('TC01: Fill all fields with valid data and submit successfully', async ({ p
   await page.waitForTimeout(3000);
 
   await page.getByRole('option', { name: 'USA' }).click();
-  await page.waitForTimeout(3000);
 
   await page.getByTestId('input-city').fill('Texas');
 
   await page.getByTestId('input-password').fill('pass123');
   await page.getByTestId('input-confirm-password').fill('pass123');
+
 
   await page.getByTestId('checkbox-terms').check();
 
