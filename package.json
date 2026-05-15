@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:dev": "cross-env ENV=dev npx playwright test ",
+    "test:qa": "cross-env ENV=qa npx playwright test tests/loginenvbased.spec.ts",
+    "test:uat": "cross-env ENV=uat npx playwright test",
+    "test:prod": "cross-env ENV=prod npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0"
+    "@types/node": "^25.6.0",
+    "cross-env": "^10.1.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "dotenv": "^17.4.2"
   }
 }
