@@ -13,7 +13,7 @@ test('TC01: Verify button is clickable and triggers action', async ({ page }) =>
 
   await button.click();
 
-  await expect(page).toHaveURL('https://www.qaplayground.com/');
+  await expect(page).toHaveURL('https://qaplayground.com/');
 
 });
 
@@ -40,6 +40,6 @@ test('TC03: Verify button triggers the correct action on click', async ({ page }
 
     const button = page.getByRole('button', { name: 'Go To Home' });
     await button.click();
-    await expect(page).toHaveURL('https://www.qaplayground.com/');
+    await expect(page).toHaveURL('https://qaplayground.com/');
 
 });
