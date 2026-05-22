@@ -24,7 +24,7 @@ test('TC02: Verify button displays the correct label text', async ({ page }) => 
     await page.getByTestId('practice-card-buttons').getByText('Practice Now').click();
     await expect(page).toHaveTitle(/How to Handle Button Clicks/);
 
-    const button = page.getByRole('button', { name: 'Go To Home' });
+    const button = page.getByRole('button', { name: 'Go To Homeeee' });
 
     await expect(button).toBeVisible();
     await expect(button).toHaveText('Go To Home');

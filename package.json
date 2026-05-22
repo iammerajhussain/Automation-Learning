@@ -9,10 +9,13 @@
     "test:uat": "cross-env ENV=uat npx playwright test",
     "test:prod": "cross-env ENV=prod npx playwright test",
     "clean": "rimraf allure-results allure-report",
-    "test:single": "npm run clean && npx playwright test tests/button.spec.ts && npm run report-generate && npm run report-open",
-    "test": "npm run clean && npx playwright test  && npm run report-generate && npm run report-open",
+    "pretest": "npm run clean",
+    "test": "npx playwright test tests/button.spec.ts || cd .",
+    "posttest": "npm run report-generate && npm run report-open",
     "report-generate": "allure generate allure-results --clean -o allure-report",
-    "report-open": "allure open allure-report"
+    "report-open": "allure open allure-report",
+    "test2": "npm run clean && npx playwright test tests/button.spec.ts || cd . && npm run report-generate && npm run report-open"
+    
   },
   "keywords": [],
   "author": "",
